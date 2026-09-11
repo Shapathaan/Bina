@@ -2,53 +2,78 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
-    <title>Binance Türkiye</title>
+    <title>Independent Help Portal</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="page">
+<main class="page">
 
-        <!-- Background -->
-        <img
-            src="hero.jpg"
-            class="background"
-            alt=""
+    <!-- Desktop artwork -->
+    <img
+        src="hero.jpg"
+        class="background desktop-bg"
+        alt=""
+    >
+
+    <!-- Mobile artwork -->
+    <img
+        src="hero-mobile.jpg"
+        class="background mobile-bg"
+        alt=""
+    >
+
+    <div class="overlay"></div>
+
+    <!-- Unofficial notice -->
+    <div class="notice">
+        UNOFFICIAL • INDEPENDENT WEBSITE
+    </div>
+
+    <!-- Desktop content -->
+    <section class="content desktop-content">
+
+        <p class="description">
+            Bu web sitesi bir yardım portalıdır, herhangi bir sorunuz için
+            lütfen aşağıdaki e-posta adresinden bizimle iletişime geçin.
+        </p>
+
+        <a
+            href="mailto:EMAIL@DOMAIN.COM"
+            class="email"
         >
+            EMAIL@DOMAIN.COM
+        </a>
 
-        <!-- Subtle overlay -->
-        <div class="overlay"></div>
+    </section>
 
-        <!-- Unofficial notice -->
-        <div class="notice">
-            UNOFFICIAL • INDEPENDENT WEBSITE
-        </div>
+    <!-- Mobile content -->
+    <section class="content mobile-content">
 
-        <!-- Main text -->
-        <section class="content">
+        <p class="description">
+            Bu web sitesi bir yardım portalıdır. Herhangi bir sorunuz için
+            lütfen aşağıdaki e-posta adresinden bizimle iletişime geçin.
+        </p>
 
-            <p class="description">
-                Bu web sitesi bir yardım portalıdır, herhangi bir sorunuz için
-                lütfen aşağıdaki e-posta adresinden bizimle iletişime geçin.
-            </p>
+        <a
+            href="mailto:EMAIL@DOMAIN.COM"
+            class="email"
+        >
+            EMAIL@DOMAIN.COM
+        </a>
 
-            <!-- E-posta adresini buraya yaz -->
-            <a
-                href="mailto:EMAIL@DOMAIN.COM"
-                class="email"
-            >
-                EMAIL@DOMAIN.COM
-            </a>
+    </section>
 
-        </section>
+</main>
 
-    </main>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
