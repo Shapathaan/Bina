@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #111;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   FULL SCREEN
+========================= */
+
+.page {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.02);
+
+    transition: transform 0.2s ease-out;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.08),
+            rgba(0, 0, 0, 0.02) 55%,
+            rgba(0, 0, 0, 0.12)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice {
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50px;
+
+    background: rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 1.7px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(42vw, 620px);
+
+    margin-left: 39vw;
+
+    margin-top: 3vh;
+
+    text-align: center;
+
+    color: #111;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,0.2);
+}
+
+
+.content h1 {
+
+    font-size: clamp(
+        40px,
+        5.3vw,
+        86px
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+.content h1 span {
+
+    display: inline-block;
+
+    animation:
+        floatingText 3.2s
+        ease-in-out
+        infinite;
+}
+
+
+.content p {
+
+    margin-top: 22px;
+
+    max-width: 470px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: clamp(
+        14px,
+        1.35vw,
+        21px
+    );
+
+    line-height: 1.45;
+
+    font-weight: 600;
+
+    opacity: 0.85;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes floatingText {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+        filter:
+            drop-shadow(
+                0 0 0
+                rgba(255,255,255,0)
+            );
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+
+        filter:
+            drop-shadow(
+                0 0 14px
+                rgba(255,255,255,0.55)
+            );
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .background {
+
+        object-position: center;
+    }
+
+
+    .content {
+
+        width: 78vw;
+
+        margin-left: 8vw;
+
+        margin-top: 18vh;
+    }
+
+
+    .content h1 {
+
+        font-size:
+            clamp(
+                42px,
+                12vw,
+                68px
+            );
+    }
+
+
+    .content p {
+
+        font-size: 14px;
+
+        margin-top: 16px;
+    }
+
+
+    .notice {
+
+        top: 12px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.2px;
+
+        padding: 7px 12px;
+    }
+}
