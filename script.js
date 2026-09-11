@@ -2,7 +2,10 @@ const background =
     document.querySelector(".background");
 
 
-// Desktop parallax animation
+/*
+    Desktop parallax effect
+*/
+
 if (
     window.matchMedia("(pointer: fine)").matches
 ) {
@@ -16,6 +19,7 @@ if (
 
             const y =
                 (event.clientY / window.innerHeight - 0.5) * 3;
+
 
             background.style.transform =
                 `scale(1.025)
