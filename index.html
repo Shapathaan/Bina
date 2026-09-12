@@ -2,7 +2,6 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -17,41 +16,30 @@
 
 <main class="page">
 
-    <!-- Vertical mobile artwork -->
+    <!-- Desktop -->
     <img
         src="hero.jpg"
-        class="background"
-        alt=""
+        class="background desktop-bg"
+        alt="Independent help portal"
     >
 
-    <!-- Dark subtle overlay -->
-    <div class="overlay"></div>
+    <!-- Mobile -->
+    <img
+        src="hero-mobile.jpg"
+        class="background mobile-bg"
+        alt="Independent help portal"
+    >
 
-    <!-- Top notice -->
-    <div class="notice">
-        UNOFFICIAL • INDEPENDENT WEBSITE
-    </div>
-
-    <!-- Text content -->
-    <section class="content">
-
-        <p class="description">
-            Bu web sitesi bir yardım portalıdır, herhangi bir sorunuz için
-            lütfen aşağıdaki e-posta adresinden bizimle iletişime geçin.
-        </p>
-
-        <a
-            href="mailto:EMAIL@DOMAIN.COM"
-            class="email"
-        >
-            EMAIL@DOMAIN.COM
-        </a>
-
-    </section>
+    <!-- Clickable email -->
+    <a
+        class="email-button"
+        href="mailto:EMAIL@DOMAIN.COM"
+        aria-label="Contact by email"
+    >
+        EMAIL@DOMAIN.COM
+    </a>
 
 </main>
-
-<script src="script.js"></script>
 
 </body>
 </html>
