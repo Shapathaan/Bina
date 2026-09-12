@@ -117,19 +117,25 @@ body {
     transform: translate(-50%, -50%) scale(0.96);
 }
 
+
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
+
+    .desktop-bg {
+        display: none !important;
+    }
+
+    .mobile-bg {
+        display: block !important;
+    }
+
     .email-button {
         padding: 9px 15px;
         font-size: 13px;
-        border-radius: 9px;
-
-        background: rgba(255, 255, 255, 0.18);
-        backdrop-filter: blur(9px);
-        -webkit-backdrop-filter: blur(9px);
+        border-radius: 9px
     }
 }
 
